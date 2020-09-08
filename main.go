@@ -44,6 +44,7 @@ func run() {
 	if args := flag.Args(); len(args) > 0 {
 		query = args[0]
 	}
+	log.Printf("query:%s", query)
 
 	repos, err := listReposIfNeeded()
 	if err != nil {

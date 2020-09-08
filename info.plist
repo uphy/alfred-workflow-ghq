@@ -101,9 +101,9 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./build/alfred-ghq -type vscode</string>
+				<string>./build/alfred-ghq -type vscode {query}</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -150,9 +150,9 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./build/alfred-ghq -type idea</string>
+				<string>./build/alfred-ghq -type idea {query}</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -214,9 +214,9 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./build/alfred-ghq -type terminal</string>
+				<string>./build/alfred-ghq -type terminal {query}</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
