@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2A41B045-F13E-4D3E-8FD8-9BF153D38C82</string>
+				<string>8D35239A-CC08-459B-BE2E-29A89DE50957</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -174,17 +174,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string>~/Applications/JetBrains Toolbox/IntelliJ IDEA Ultimate Release.app</string>
-				<key>sourcefile</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/idea "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>2A41B045-F13E-4D3E-8FD8-9BF153D38C82</string>
+			<string>8D35239A-CC08-459B-BE2E-29A89DE50957</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -269,19 +277,19 @@
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
-		<key>2A41B045-F13E-4D3E-8FD8-9BF153D38C82</key>
-		<dict>
-			<key>xpos</key>
-			<integer>325</integer>
-			<key>ypos</key>
-			<integer>195</integer>
-		</dict>
 		<key>703F91E8-A8DB-470A-B40F-3BE7ABC65AE9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>65</integer>
 			<key>ypos</key>
 			<integer>355</integer>
+		</dict>
+		<key>8D35239A-CC08-459B-BE2E-29A89DE50957</key>
+		<dict>
+			<key>xpos</key>
+			<integer>330</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>BE859F40-AF08-46E3-B408-B3153E5357B7</key>
 		<dict>
