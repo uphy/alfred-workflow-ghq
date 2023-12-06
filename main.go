@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"log"
+	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
@@ -63,7 +64,8 @@ func listReposIfNeeded() ([]string, error) {
 	cacheExists := wf.Cache.Exists(cacheName)
 	if !cacheExists || wf.Cache.Expired(cacheName, time.Second*10) {
 		log.Println("load")
-		repos, err := listRepos()
+		var err error
+		repos, err = listRepos()
 		if err != nil {
 			return nil, err
 		}
@@ -78,7 +80,9 @@ func listReposIfNeeded() ([]string, error) {
 }
 
 func listRepos() ([]string, error) {
-	list, err := exec.Command("/usr/local/bin/ghq", "list", "-p").Output()
+	cmd := exec.Command("ghq", "list", "-p")
+	cmd.Env = append(os.Environ(), "PATH=/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin")
+	list, err := cmd.Output()
 	if err != nil {
 		return nil, err
 	}
