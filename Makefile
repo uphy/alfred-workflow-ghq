@@ -1,22 +1,10 @@
-SHELL := /bin/bash
+WORKFLOW_FILE = ghq.alfredworkflow
 
-PLIST=info.plist
-BUILD_DIR=build
-EXEC_BIN=$(BUILD_DIR)/alfred-ghq
-DIST_FILE=$(BUILD_DIR)/ghq.alfredworkflow
-GO_SRCS=$(shell find -f . \( -name \*.go \))
+build:
+	zip -r $(WORKFLOW_FILE) * -x Makefile -x .gitignore -x .git -x .github -x .editorconfig -x README.md
 
-all: $(DIST_FILE)
+install: build
+	open $(WORKFLOW_FILE)
 
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
-
-$(EXEC_BIN): $(BUILD_DIR) $(GO_SRCS)
-	go build -o $(EXEC_BIN) .
-
-$(DIST_FILE): $(EXEC_BIN) $(PLIST)
-	zip -r $(DIST_FILE) $(PLIST) $(EXEC_BIN)
-
-.PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(WORKFLOW_FILE)

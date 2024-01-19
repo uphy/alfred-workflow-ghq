@@ -1,25 +1,11 @@
-# Alfred Workflow for ghq
+# ghq Alfred Workflow
 
-Search and open ghq managed repositories in Visual Studio Code, iTerm, IntelliJ IDEA.
-Inspired by https://github.com/uetchy/alfred-workflow-ghq
+## Requirements
 
-Differences:
-- Support fuzzy search
-- Easy Installation (use golang instead of python3)
+- Alfred 5
+- [Deno](https://docs.deno.com/runtime/manual/getting_started/installation)
 
-## Install
+## Installation
 
-[Download Alfred Workflow](https://github.com/uphy/alfred-workflow-ghq/releases) and install it on your machine.
-
-
-## Development
-
-execution
-
-```shell
-alfred_workflow_bundleid=1 alfred_workflow_cache=cache alfred_workflow_data=data go run main.go query 
-```
-
-## Release
-
-tag `vX.X.X`
+1. Download the latest release
+2. Double click the downloaded file to install
